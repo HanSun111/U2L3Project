@@ -1,28 +1,38 @@
 public class U2L3Runner {
     public static void main(String[] args) {
+        double length, width, height;
 
-        Box box = new Box(10.5, 12.6, 15.75);
+        length = 5.0;
+        width = 10.0;
+        height = length;
 
-        // Use the return value from volume() by storing it in a variable
-        double boxVolume = box.volume();
-        System.out.println("My box has a volume of " + boxVolume);
+        Box box1 = new Box(length, width, height);
+        Box box2 = new Box(length);
+        box1.printDimensions();
+        box2.printDimensions();
 
-// Use the return value from volume() by printing it
-        System.out.println("My box has a volume of " + box.volume());
+        String bigger;
 
-// Call the method without doing anything with the return value
-// WILL THE LINE OF CODE BELOW COMPILE/RUN?  Try it!  What happens?
-        box.volume();
+        if (box1.volume() > box2.volume())
+        {
+            bigger = "box1 has greater volume";
+        }
+        else if (box1.volume() < box2.volume())
+        {
+            bigger = "box2 has greater volume";
+        }
+        else
+        {
+            bigger = "both boxes have equal volume";
+        }
 
-        // Trying to use a void method as though it returns a value
-        String dimensions = box.printDimensions();
+        System.out.println(bigger);
 
-// Trying to use a void method as though it returns a value
-        System.out.println("My box dimensions are " + dimensions);
+        boolean box1sides = box1.anySideLongerThan(length);
+        boolean box2sides = box2.anySideLongerThan(length);
 
-// void methods are DESIGNED to be used as just a statement
-        box.printDimensions();  // this is how void methods should be used!
-
+        System.out.println("box1 has a side that exceeds " + length + ": " + box1sides);
+        System.out.println("box2 has a side that exceeds " + length + ": " + box2sides);
 
     }
 }
