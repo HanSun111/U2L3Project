@@ -1,12 +1,15 @@
 public class U2L3Runner {
-    public static void main(String[] args) {
-        Game fun = new Game();
-
-        fun.addPlayer(3);
-        fun.increaseScore(80000001);
-
-        System.out.println("Players: " + fun.getPlayers());
-        System.out.println("Score: " + fun.getScore());
-        System.out.println("Avg score per player: " + fun.averageScorePerPlayer());
+    public static void main(String[] args)
+    {
+        Letter letter = new Letter("Mr. Das");
+        System.out.println();
+        letter.writeLetter("Ivan");
+        System.out.println();
+        letter.writeLetter("Yun");
+        System.out.println();
+        letter.writeLetter("Kazi");
+        System.out.println();
+        letter.writeLetter("Garvin");
     }
+
 }

@@ -1,8 +1,11 @@
 public class Letter {
-    /**
-     * Prints out a complete letter by printing the greeting,
-     * Followed by the special message, followed by the closing
-     */
+
+    private String fromWho;
+    private String toWho;
+
+    public Letter(){
+        return
+    }
 
     public void writeLetter() {
         greeting();
