@@ -3,18 +3,17 @@ public class Letter {
     private String fromWho;
     private String toWho;
 
-    public Letter(){
-        return
-    }
+public Letter(String from){fromWho = from; }
 
-    public void writeLetter() {
+    public void writeLetter(String to) {
+        toWho = to;
         greeting();
         specialMessage();
         closing();
     }
         public void greeting ()
         {
-            System.out.println("Hello, friend!");
+            System.out.println("Hello, " + toWho);
         }
 
         public void specialMessage ()
@@ -24,7 +23,7 @@ public class Letter {
 
         public void closing ()
         {
-            System.out.println("See you later!");
+            System.out.println("From, "+ fromWho);
         }
 
     }
